@@ -37,7 +37,8 @@ a {
 .page-3,
 .page-4,
 .page-5,
-.page-6 {
+.page-6,
+.page-7 {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -131,4 +132,35 @@ a {
 .page-6 input {
    padding: 10px;
    font-size: 16px;
+}
+/* ................................................................... */
+
+.main-b {
+   margin-top: 10%;
+}
+.tree {
+   list-style-type: none;
+}
+.tree li {
+   margin: 15px;
+   position: relative;
+}
+.tree li:before,
+.tree li:after {
+   content: "";
+   left: -20px;
+   position: absolute;
+   right: auto;
+}
+.tree li:after {
+   border-top: 1px solid #ccc;
+   height: 100%;
+   top: 50px;
+}
+.tree li a {
+   border: 1px solid #ccc;
+   padding: 5px 10px;
+   text-decoration: none;
+   color: #333;
+   display: inline-block;
 }
