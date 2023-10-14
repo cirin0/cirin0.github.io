@@ -144,7 +144,6 @@ a {
 	content: "";
 	left: -20px;
 	position: absolute;
-	right: auto;
 }
 .tree li:after {
 	border-top: 1px solid #ccc;
@@ -161,4 +160,7 @@ a {
 
 .page-7 .tree {
 	font-family: "Open Sans", sans-serif;
+}
+#Tree ul {
+	display: none;
 }
