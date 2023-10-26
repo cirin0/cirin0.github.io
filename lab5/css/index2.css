@@ -19,20 +19,17 @@ body {
 }
 
 .menu {
-   width: 16rem;
+   width: 20rem;
    background: #545f60;
    color: #fff;
 }
 
 .menu ul {
    list-style: none;
-   padding: 0;
-   margin-top: 10px;
-   margin-bottom: 10px;
 }
 
 .menu li {
-   padding: 1rem;
+   padding: 1.5rem 1.2rem;
    border-top: 1px solid #6edeef;
    position: relative;
    cursor: pointer;
@@ -48,7 +45,9 @@ body {
    display: block;
    text-align: center;
 }
-
+.menu a:hover {
+   color: #6edeef;
+}
 .submenu {
    display: none;
    position: absolute;
