@@ -58,7 +58,7 @@ function isPostCode(postcode) {
 }
 
 function isName(login) {
-   return /^([А-ЩЬЮЯІЇЄҐ][а-щьюяіїєґ]+)\s([А-ЩЬЮЯІЇЄҐ]+\s?[А-ЩЬЮЯІЇЄҐ]+)$/.test(login);
+   return /^([А-ЩЬЮЯІЇЄҐA-Z][а-щьюяіїєґa-z]+)\s([А-ЩЬЮЯІЇЄҐA-Z]+\s?[А-ЩЬЮЯІЇЄҐA-Z]+)$/.test(login);
 }
 
 function isUsername(username) {
