@@ -20,13 +20,20 @@ function checkInputs() {
 
 function validateInput(input, label, validationFunction) {
    const inputValue = input.value.trim();
-
    if (inputValue === '') {
       setErrorFor(input, `${label} не може бути порожнім`);
    } else if (!validationFunction(inputValue)) {
-      setErrorFor(input, `Не правильний ${label}`);
+      setErrorFor(input, `Не правильне(ний) ${label}`);
    } else {
       setSuccessFor(input);
+   }
+   if (input === password) {
+      if (inputValue.length < 8) {
+         setErrorFor(input, 'Пароль повинен містити принаймні 8 символів');
+
+      } else if (!/^(?=.*[a-zA-Z])(?=.*\d)(?=.*[-_!@#$%^&*])/.test(inputValue)) {
+         setErrorFor(input, 'Повинен містити 1 букву, 1 цифру і спецсимвол');
+      }
    }
 }
 
@@ -55,7 +62,7 @@ function isName(login) {
 }
 
 function isUsername(username) {
-   return /^[a-zA-Z0-9]+$/.test(username);
+   return /^[a-zA-Z]+$/.test(username);
 }
 
 function isPassword(password) {
