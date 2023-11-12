@@ -7,7 +7,7 @@ function reverseNumbersSequence() {
 
 function noZeros() {
    const inputNumbers = document.getElementById("noZerosInput").value;
-   const numbers = inputNumbers.split(',').map(Number);
+   const numbers = inputNumbers.split('').map(Number);
    const filteredNumbers = numbers.filter(number => number !== 0);
    document.getElementById("noZerosOutput").textContent = filteredNumbers;
 }
@@ -111,8 +111,11 @@ function isSpam() {
          break;
       }
    }
-
-   resultElement.textContent = isSpam ? "Рядок містить спам" : "Рядок не містить спам";
+   if (isSpam) {
+      resultElement.textContent = "Рядок містить спам";
+   } else {
+      resultElement.textContent = "Рядок не містить спам";
+   }
 }
 
 function truncateString() {
