@@ -151,31 +151,24 @@ function displayTimeInfo() {
 /****************************************************/
 
 function formatDate() {
-   let userInput = document.getElementById('userInput').value;
+   const userInput = document.getElementById('userInput').value;
 
-   // Перевірка чи рядок не пустий
    if (userInput.trim() === '') {
-      alert('Please enter a valid date and time.');
+      alert('Введіть дійсну дату та час.');
       return;
    }
-
-   // Розбиваємо введений рядок на частини
    let parts = userInput.split(' ');
-
-   // Розділяємо дату та час
    let dateParts = parts[0].split('.');
    let timeParts = parts[1].split(':');
-
    // Формуємо об'єкт Date
    let inputDate = new Date(dateParts[2], dateParts[1] - 1, dateParts[0], timeParts[0], timeParts[1]);
-
    // Розраховуємо різницю в секундах між введеним часом та поточним часом
-   let timeDifference = Math.floor((CurrentDate - inputDate) / 1000);
+   let currentDate = new Date();
+   let timeDifference = Math.floor((currentDate - inputDate) / 1000);
 
-
-   let day = CurrentDate.getDate();
-   let month = CurrentDate.getMonth() + 1;
-   let year = CurrentDate.getFullYear();
+   let day = inputDate.getDate(); // Змінено на отримання дня з введеної дати
+   let month = inputDate.getMonth() + 1;
+   let year = inputDate.getFullYear();
 
    let formatDate = day + "." + month + "." + year;
    // Визначаємо, який формат виводу використовувати
@@ -185,9 +178,7 @@ function formatDate() {
    } else if (timeDifference < 3600) {
       result = `${Math.floor(timeDifference / 60)} хв. назад`;
    } else {
-      result = inputDate.toLocaleString();
+      result = formatDate + ' ' + inputDate.toLocaleTimeString();
    }
-
-   // Виводимо результат
    document.getElementById('result5').textContent = result;
 }
