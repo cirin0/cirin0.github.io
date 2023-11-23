@@ -9,7 +9,8 @@ elem.onclick = function () {
          elem.style.width = progress * 100 + '%';
       }
    });
-}
+};
+
 const brick = document.getElementById('box');
 const brick2 = document.getElementById('box-2');
 const brick3 = document.getElementById('box-3');
@@ -121,4 +122,3 @@ function bounce(timeFraction) {
       }
    }
 }
-
