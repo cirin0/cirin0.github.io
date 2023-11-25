@@ -13,15 +13,22 @@ body {
    justify-content: center;
    flex-direction: column;
 }
+<<<<<<< HEAD
 h1,
 a {
+=======
+h1 {
+>>>>>>> 493e33d05cdc45206702f946b67c16fd89a7402e
    display: flex;
    justify-content: center;
    margin-bottom: 2%;
 }
+<<<<<<< HEAD
 .h3 {
    margin-top: 2%;
 }
+=======
+>>>>>>> 493e33d05cdc45206702f946b67c16fd89a7402e
 .wrapper {
    display: flex;
    gap: 10px;
