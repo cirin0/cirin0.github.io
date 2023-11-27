@@ -58,7 +58,8 @@ input {
 .block-2,
 .block-3,
 .block-4,
-.block-5 {
+.block-5,
+.block-6 {
    justify-content: space-between;
    align-items: center;
 }
@@ -90,4 +91,26 @@ pre {
    font-size: 16px;
    padding: 3px;
    margin-bottom: 20px;
+}
+
+#animatedElement {
+   position: relative;
+   background-color: blue;
+   width: 100px;
+   height: 100px;
+   opacity: 0;
+}
+#animatedElement1 {
+   position: relative;
+   background-color: yellow;
+   width: 100px;
+   height: 100px;
+   opacity: 0;
+}
+#posRes {
+   max-width: 160px;
+   overflow: hidden;
+}
+.block-6 {
+   position: relative;
 }

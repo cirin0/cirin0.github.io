@@ -61,7 +61,6 @@ $(document).ready(function () {
    $('#nextUntilBtn').click(function () {
       $("p.start").nextUntil("p.stop").css({ "color": "red", "font-style": "italic" });
    });
-
    // *************************************************
    $('#modifyClassBtn').click(function () {
       $('.modify').filter(function () {
@@ -71,8 +70,7 @@ $(document).ready(function () {
          'font-weight': 'bold'
       }).text('modify');
    });
-
-   // Modify Every Third LI
+   // *************************************************
    $('#modifyLiBtn').click(function () {
       $('li').filter(':nth-child(3n)').css({
          'background-color': 'lightgreen',
@@ -80,18 +78,65 @@ $(document).ready(function () {
       }).text('modify');
    });
    // *************************************************
-   $("#mergeButton").on("click", function () {
+   $("#mergeButton").click(function () {
       let mergedText = $("#mergeResult").add("#mergeResult2").text();
       $("#mergeResult").text(mergedText);
       $("#mergeResult2").hide();
    });
-
+   // *************************************************
    $("#trimstr").text("            Рядок з багатьма пробілами                ").show();
-   $("#trimButton").on("click", function () {
+   $("#trimButton").click(function () {
       let trimmedText = $("#trimstr").text().trim();
       $("#trimstr").text(trimmedText);
    });
    // *************************************************
+   $("#startAmimate").click(function () {
+      $("#animatedElement").css({ 'position': 'absolute' })
+      $("#animatedElement1").css({ 'position': 'absolute' })
+      $("#animatedElement").animate(
+         {
+            opacity: 1,
+            left: "200px",
+            width: "+=70",
+            height: "90px"
+         },
+         {
+            duration: 5000,
+            easing: "linear",
+            complete: function () {
+               $("#endRes").text("Кінець анаміції");
+            },
+            start: function () {
+               $("#startRes").text("Початок анаміції");
+            },
+            step: function (now) {
+               $("#posRes").text("Animation step: " + now);
+            }
+         }
+      );
+      $("#animatedElement1").animate(
+         {
+            opacity: 1,
+            top: "+=90",
+            left: "200px",
+            width: "+=70",
+            height: "90px"
+         },
+         {
+            duration: 5000,
+            easing: "linear",
+            complete: function () {
+               $("#endRes").text("Кінець анаміції");
+            },
+            start: function () {
+               $("#startRes").text("Початок анаміції");
+            },
+            step: function (now) {
+               $("#posRes").text("Animation step: " + now);
+            }
+         }
+      );
+   });
    // *************************************************
    // *************************************************
 
