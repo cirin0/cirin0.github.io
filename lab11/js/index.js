@@ -36,7 +36,7 @@ $(document).ready(function () {
    // *************************************************
    $("#dPos").click(function () {
       let pos = $("#image2").position();
-      $("#oPos").text("Позиція зверху:" + pos.top + " Позиція з ліва: " + pos.left);
+      $("#oPos").text("Позиція зверху: " + pos.top + " Позиція з ліва: " + pos.left);
    });
    // *************************************************
    $('#closestBtn').click(function () {
@@ -63,7 +63,34 @@ $(document).ready(function () {
    });
 
    // *************************************************
+   $('#modifyClassBtn').click(function () {
+      $('.modify').filter(function () {
+         return true;
+      }).css({
+         'background-color': 'lightblue',
+         'font-weight': 'bold'
+      }).text('modify');
+   });
+
+   // Modify Every Third LI
+   $('#modifyLiBtn').click(function () {
+      $('li').filter(':nth-child(3n)').css({
+         'background-color': 'lightgreen',
+         'font-style': 'italic'
+      }).text('modify');
+   });
    // *************************************************
+   $("#mergeButton").on("click", function () {
+      let mergedText = $("#mergeResult").add("#mergeResult2").text();
+      $("#mergeResult").text(mergedText);
+      $("#mergeResult2").hide();
+   });
+
+   $("#trimstr").text("            Рядок з багатьма пробілами                ").show();
+   $("#trimButton").on("click", function () {
+      let trimmedText = $("#trimstr").text().trim();
+      $("#trimstr").text(trimmedText);
+   });
    // *************************************************
    // *************************************************
    // *************************************************

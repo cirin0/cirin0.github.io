@@ -55,12 +55,16 @@ input {
    margin-bottom: 10px;
 }
 .block-1,
-.block-2 {
+.block-2,
+.block-3,
+.block-4,
+.block-5 {
    justify-content: space-between;
    align-items: center;
 }
 .block-1 div,
-.block-2 div {
+.block-2 div,
+.block-5 div {
    border-radius: 10px;
    padding: 10px;
    border: 1px solid #000;
@@ -70,4 +74,20 @@ span {
    display: block;
    margin-top: 10px;
    font-size: 19px;
+}
+.selected {
+   background-color: lightblue;
+}
+
+.center-ul {
+   display: flex;
+   gap: 30px;
+}
+
+pre {
+   color: #fff;
+   background-color: #666;
+   font-size: 16px;
+   padding: 3px;
+   margin-bottom: 20px;
 }

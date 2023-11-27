@@ -56,7 +56,6 @@
             <p>Четвертий параграф.</p>
             <p class="stop">П'ятий параграф.</p>
             <p>Шостий параграф.</p>
-
             <button id="closestBtn">closest()</button>
             <button id="mapBtn">map()</button>
             <button id="prevAllBtn">prevAll()</button>
@@ -64,11 +63,36 @@
             <button id="nextUntilBtn">nextUntil()</button>
          </div>
       </div>
-      <div class="block-4 bor">
-
+      <div class="block-4 bor" style="flex-direction: column;">
+         <div class="center-ul">
+            <ul class="modify">
+               <li>Пункт 1</li>
+               <li>Пункт 2</li>
+               <li>Пункт 3</li>
+               <li>Пункт 4</li>
+               <li>Пункт 5</li>
+            </ul>
+            <ul class="modify">
+               <li>Пункт 1</li>
+               <li>Пункт 2</li>
+               <li>Пункт 3</li>
+               <li>Пункт 4</li>
+               <li>Пункт 5</li>
+            </ul>
+         </div>
+         <button id="modifyClassBtn">Заміти елементи з класом modify</button>
+         <button id="modifyLiBtn">Замінити третій елемнт li</button>
       </div>
       <div class="block-5 bor">
-
+         <div>
+            <p id="mergeResult">Привіт Я. </p>
+            <p id="mergeResult2">студент ПНУ </p>
+            <button id="mergeButton">Об'єднати рядки</button>
+         </div>
+         <div>
+            <pre id="trimstr"></pre>
+            <button id="trimButton">Обрізати пробіли</button>
+         </div>
       </div>
    </div>
    <a style="font-size: 20px; color: #000;" href="/index.html" class="h3">Головна</a>
