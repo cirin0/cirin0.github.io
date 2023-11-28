@@ -59,7 +59,8 @@ input {
 .block-3,
 .block-4,
 .block-5,
-.block-6 {
+.block-6,
+.block-7 {
    justify-content: space-between;
    align-items: center;
 }
@@ -113,4 +114,13 @@ pre {
 }
 .block-6 {
    position: relative;
+}
+#box1,
+#box2,
+#box3,
+#box4,
+#box5 {
+   display: none;
+   width: 50px;
+   height: 50px;
 }

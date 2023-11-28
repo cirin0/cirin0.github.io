@@ -114,6 +114,7 @@ $(document).ready(function () {
             }
          }
       );
+      // *************************************************
       $("#animatedElement1").animate(
          {
             opacity: 1,
@@ -138,6 +139,20 @@ $(document).ready(function () {
       );
    });
    // *************************************************
+   $("#delay").click(function () {
+      $("#box1").delay("slow").fadeIn();
+      $("#box2").delay("fast").fadeIn();
+      $("#box3").delay(800).fadeIn();
+      $("#box4").delay(2000).fadeIn();
+      $("#box5").delay(4000).fadeIn();
+   });
    // *************************************************
+   $("#hide").click(function () {
+      $("#box1").delay("slow").hide();
+      $("#box2").delay("fast").hide();
+      $("#box3").delay(800).hide();
+      $("#box4").delay(2000).hide();
+      $("#box5").delay(4000).hide();
 
+   });
 });
