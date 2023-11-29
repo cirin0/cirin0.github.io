@@ -1,8 +1,5 @@
 $(document).ready(function () {
-
    var animatedBlock = $("#animatedBlock");
-   var animatedText = $("#animatedText");
-
    $(animatedBlock).animate({
       opacity: 0.25,
       width: "300px",
@@ -24,10 +21,8 @@ $(document).ready(function () {
          });
       }
    });
-
    // *************************************************
    $("#Element, #Element1, #Element2").hide();
-
    $("#Element")
       .delay(1000)
       .fadeIn(1000)
