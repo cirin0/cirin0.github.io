@@ -12,9 +12,10 @@ body {
 	align-items: center;
 	justify-content: center;
 	margin: 0 auto;
-	min-width: 100vh;
+	min-height: 100vh;
 	gap: 20px;
 	padding: 10px;
+	text-align: center;
 }
 a {
 	color: #000;
@@ -24,6 +25,7 @@ a {
 .name {
 	font-weight: bold;
 	font-size: 25px;
+	pointer-events: none;
 }
 p {
 	padding: 2px 6px;
@@ -32,8 +34,4 @@ p:hover {
 	border-radius: 10px;
 	background-color: #66666608;
 	border-bottom: 1px solid;
-}
-h1,
-.name {
-	text-align: center;
 }
