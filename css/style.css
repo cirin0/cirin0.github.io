@@ -33,3 +33,7 @@ p:hover {
 	background-color: #66666608;
 	border-bottom: 1px solid;
 }
+h1,
+.name {
+	text-align: center;
+}
